@@ -9,6 +9,8 @@ import lombok.Data;
 @Data
 public class Voter {
 
+
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
