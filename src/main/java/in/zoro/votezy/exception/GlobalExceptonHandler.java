@@ -30,6 +30,7 @@ public class GlobalExceptonHandler {
         return new ResponseEntity<>(err, HttpStatus.CONFLICT);
     }
 
+    @ExceptionHandler(voteNotAllowedException.class)
     public ResponseEntity<ErrorResponse> handleVoteNotAllowedException(voteNotAllowedException ex)
     {
         ErrorResponse err = new ErrorResponse(HttpStatus.FORBIDDEN.value(), ex.getMessage());
